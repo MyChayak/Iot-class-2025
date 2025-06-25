@@ -8,22 +8,22 @@
 
 | Title                  | Value                                               |
 | -----------------------| --------------------------------------------------- |
-| Full Name              | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|
-| Student ID              | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__ |
-| Installation Date      | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\_\_\_\_ |
+| Full Name              | Chayakarn Phuwavilaimetha|
+| Student ID              | 6510301013 |
+| Installation Date      | 11/06/2025 |
 
 
 ---
 
 ## 🖥️ Device Information
 
-- 💻 **Device Model / Type**: ___________________________
+- 💻 **Device Model / Type**: Virtual Machine
 - 🧬 **Firmware Type**:  
   - [ ] UEFI  
   - [x] BIOS  
 - 🏷️ **Installation Type**:  
-  - [x] Physical PC  
-  - [ ] Virtual Machine (VM)
+  - [ ] Physical PC  
+  - [x] Virtual Machine (VM)
 
 ---
 
@@ -31,9 +31,13 @@
 
 | Partition     | Size   | Filesystem | Mount Point           | Notes              |
 |---------------|--------|------------|------------------------|--------------------|
-| `/boot`       | 512MB  | ext4       | `/boot`                | For boot loader    |
-| `swap`        | 1GB    | swap       | -                      | Swap space         |
-| `/` or others |        |            |                        |                    |
+| /dev/sda1     | 19G    | ext4       | /                      | Root filesystem    |
+| udev          | 1.9G   | tmpfs      | /dev                   | Device files       |
+| tmpfs         | 392M   | tmpfs      | /run                   | Runtime data       |
+| tmpfs         | 2.0G   | tmpfs      | /dev/shm               | Shared memory      |
+| tmpfs         | 5.0M   | tmpfs      | /run/lock              | Lock files         |
+| tmpfs         | 392M   | tmpfs      | /run/user/1000         | User runtime files |
+
 
 ---
 
@@ -41,23 +45,23 @@
 
 | Title                   | Value                                               |
 | ------------------------| --------------------------------------------------- |
-| Network Interface Name  | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\     |
-| IP Address              | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__ |
-| Netmask                 | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\_\_\_\_ |
-| Gateway                 | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\_\_\_\_ |
-| DNS                     | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\_\_\_\_ |
+| Network Interface Name  | ens18     |
+| IP Address              | 172.30.15.29 |
+| Netmask                 | 255.255.255.0 |
+| Gateway                 | 172.30.15.254 |
+| DNS                     | 172.30.15.254 , 8.8.8.8 |
 
 ---
 
 ## 🖧 Hostname
 
-- 🖥️ **Hostname Set**: ___________________________
+- 🖥️ **Hostname Set**: FDT6510301013
 
 ---
 
 ## 👤 User Account
 
-- 👨‍💻 **Username Created**: ___________________________
+- 👨‍💻 **Username Created**: u6510301013
 - 🔐 **Is a Root Password Set?**:  
   - [X] Yes  
   - [ ] No
